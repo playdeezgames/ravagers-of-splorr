@@ -1,4 +1,5 @@
-﻿using ROS.Model.Enums;
+﻿using ROS.Model.Avatar;
+using ROS.Model.Enums;
 using ROS.Model.Extensions;
 using ROS.Model.World;
 using ROS.Persistence.Enums;
@@ -20,6 +21,8 @@ namespace ROS.Model
         public int Y => _world.Y;
 
         public Facings Facing => _world.Facing;
+
+        public IAvatarModel Avatar => new AvatarModel(_world);
 
         public static WorldModel Create()
         {
