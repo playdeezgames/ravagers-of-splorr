@@ -2,17 +2,18 @@
 using Ravagers.Boilerplate;
 using Ravagers.Constants;
 using ROS.Model;
+using ROS.Model.World;
 using Spectre.Console;
 
 namespace Ravagers.InPlay
 {
-    internal class NeutralDialog(WorldModel worldModel, IDialog? mainMenuDialog) : InPlayDialog(worldModel, mainMenuDialog)
+    internal class NeutralDialog(IWorldModel worldModel, IDialog? mainMenuDialog) : InPlayDialog(worldModel, mainMenuDialog)
     {
         public override IDialog? Run()
         {
             AnsiConsole.Clear();
-            AnsiConsole.MarkupLine($"Position: ({_model.X}, {_model.Y})");
-            AnsiConsole.MarkupLine($"Facing: {_model.Facing}");
+            AnsiConsole.MarkupLine($"Position: ({_model.Avatar.X}, {_model.Avatar.Y})");
+            AnsiConsole.MarkupLine($"Facing: {_model.Avatar.Facing}");
             var prompt = new SelectionPrompt<string>() { Title = Prompts.NowWhat };
             prompt.AddChoice(Choices.Move);
             prompt.AddChoice(Choices.Turn);

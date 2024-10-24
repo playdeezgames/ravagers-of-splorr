@@ -24,7 +24,7 @@ namespace ROS.Model
 
         public IAvatarModel Avatar => new AvatarModel(_world);
 
-        public static WorldModel Create()
+        public static IWorldModel Create()
         {
             return new WorldModel(Persistence.World.World.Create());
         }

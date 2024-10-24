@@ -3,11 +3,12 @@ using Ravagers.Constants;
 using Ravagers.InPlay;
 using Ravagers.Utility;
 using ROS.Model;
+using ROS.Model.World;
 using Spectre.Console;
 
 namespace Ravagers.Boilerplate
 {
-    internal class GameMenuDialog(WorldModel model, IDialog? mainMenuDialog) : InPlayDialog(model, mainMenuDialog)
+    internal class GameMenuDialog(IWorldModel model, IDialog? mainMenuDialog) : InPlayDialog(model, mainMenuDialog)
     {
         public override IDialog? Run()
         {

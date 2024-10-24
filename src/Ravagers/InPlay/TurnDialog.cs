@@ -2,11 +2,12 @@
 using Ravagers.Constants;
 using ROS.Model;
 using ROS.Model.Enums;
+using ROS.Model.World;
 using Spectre.Console;
 
 namespace Ravagers.InPlay
 {
-    internal class TurnDialog(WorldModel model, IDialog? mainMenuDialog) : InPlayDialog(model, mainMenuDialog)
+    internal class TurnDialog(IWorldModel model, IDialog? mainMenuDialog) : InPlayDialog(model, mainMenuDialog)
     {
         public override IDialog? Run()
         {

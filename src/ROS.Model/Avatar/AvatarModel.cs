@@ -22,8 +22,8 @@ namespace ROS.Model.Avatar
         public void Move(Moves move)
         {
             var moveFacing = _world.Facing.GetMoveFacing(move);
-            int nextX = _world.Facing.GetNextX(_world.X, _world.Y);
-            int nextY = _world.Facing.GetNextY(_world.X, _world.Y);
+            int nextX = moveFacing.GetNextX(_world.X, _world.Y);
+            int nextY = moveFacing.GetNextY(_world.X, _world.Y);
             _world.X = nextX;
             _world.Y = nextY;
         }
