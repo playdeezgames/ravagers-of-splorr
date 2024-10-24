@@ -1,5 +1,5 @@
 ﻿using ROS.Model.Enums;
-using ROS.Persistence;
+using ROS.Persistence.Enums;
 using System.Collections.Generic;
 
 namespace ROS.Model.Extensions

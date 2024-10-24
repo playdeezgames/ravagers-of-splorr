@@ -1,6 +1,8 @@
-﻿namespace ROS.Persistence
+﻿using ROS.Persistence.Enums;
+
+namespace ROS.Persistence.World
 {
-    public class World: IWorld
+    public class World : IWorld
     {
         protected World()
         {

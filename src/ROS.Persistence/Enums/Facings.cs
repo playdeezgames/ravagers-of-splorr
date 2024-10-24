@@ -1,4 +1,4 @@
-﻿namespace ROS.Persistence
+﻿namespace ROS.Persistence.Enums
 {
     public enum Facings
     {

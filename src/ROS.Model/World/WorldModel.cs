@@ -1,7 +1,8 @@
 ﻿using ROS.Model.Enums;
 using ROS.Model.Extensions;
 using ROS.Model.World;
-using ROS.Persistence;
+using ROS.Persistence.Enums;
+using ROS.Persistence.World;
 
 namespace ROS.Model
 {
@@ -22,7 +23,7 @@ namespace ROS.Model
 
         public static WorldModel Create()
         {
-            return new WorldModel(ROS.Persistence.World.Create());
+            return new WorldModel(Persistence.World.World.Create());
         }
 
         public void Move(Moves move)
