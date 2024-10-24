@@ -5,7 +5,6 @@ namespace ROS.Model
     public class WorldModel : IWorldModel
     {
         private readonly IWorld _world;
-        private Facings _facing = Facings.North;
 
         protected WorldModel(IWorld world) 
         {
@@ -16,7 +15,7 @@ namespace ROS.Model
 
         public int Y => _world.Y;
 
-        public Facings Facing => _facing;
+        public Facings Facing => _world.Facing;
 
         public static WorldModel Create()
         {
@@ -25,16 +24,16 @@ namespace ROS.Model
 
         public void Move(Moves move)
         {
-            var moveFacing = _facing.GetMoveFacing(move);
-            int nextX = _facing.GetNextX(_world.X, _world.Y);
-            int nextY = _facing.GetNextY(_world.X, _world.Y);
+            var moveFacing = _world.Facing.GetMoveFacing(move);
+            int nextX = _world.Facing.GetNextX(_world.X, _world.Y);
+            int nextY = _world.Facing.GetNextY(_world.X, _world.Y);
             _world.X = nextX;
             _world.Y = nextY;
         }
 
         public void Turn(Turns turn)
         {
-            _facing = _facing.MakeTurn(turn);
+            _world.Facing = _world.Facing.MakeTurn(turn);
         }
     }
 }
