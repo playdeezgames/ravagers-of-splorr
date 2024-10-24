@@ -1,7 +1,8 @@
-﻿using ROS.Persistence;
+﻿using ROS.Model.Enums;
+using ROS.Persistence;
 using System.Collections.Generic;
 
-namespace ROS.Model
+namespace ROS.Model.Extensions
 {
     public static class FacingsExtensions
     {
@@ -85,7 +86,7 @@ namespace ROS.Model
         {
             return _turnTable[facing][turn];
         }
-        internal static Facings GetMoveFacing(this Facings facing, Moves move) 
+        internal static Facings GetMoveFacing(this Facings facing, Moves move)
         {
             return _moveTable[facing][move];
         }

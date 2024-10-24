@@ -1,6 +1,7 @@
-﻿using ROS.Persistence;
+﻿using ROS.Model.Enums;
+using ROS.Persistence;
 
-namespace ROS.Model
+namespace ROS.Model.World
 {
     public interface IWorldModel
     {

@@ -1,6 +1,7 @@
 ﻿using Ravagers.Base;
 using Ravagers.Constants;
 using ROS.Model;
+using ROS.Model.Enums;
 using Spectre.Console;
 
 namespace Ravagers.InPlay

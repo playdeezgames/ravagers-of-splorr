@@ -1,5 +1,6 @@
 ﻿using Ravagers.Base;
 using ROS.Model;
+using ROS.Model.Enums;
 
 namespace Ravagers.InPlay
 {
